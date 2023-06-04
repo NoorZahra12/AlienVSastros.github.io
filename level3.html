@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINAL STAGE</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(7, 2, 33);
+        color: white;
+        /*https://media1.giphy.com/media/FlodpfQUBSp20/200w.gif?cid=6c09b9521zwnljjvciheggzd6bvh183yw2bktzhderf7bl4r&ep=v1_gifs_search&rid=200w.gif&ct=g*/
+        background-image: url(twinklingstarsbg.gif);
+        background-size: auto;
+        text-align: center;
+    }
+
+    header {
+        background-image: url(header-stars-background-design.jpg);
+        background-size: auto;
+        padding: 5px;
+        border-bottom: 1px solid midnightblue;
+    }
+
+    .text {
+        background-color: rgba(50, 0, 157, 0.326);
+        padding: 20px;
+        margin: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        width: 600px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        text-align: justify center;
+        margin-top: 5%;
+    }
+
+    button {
+        border: none;
+        background-color: lightblue;
+        padding: 20px;
+        color: darkblue;
+        border-radius: 20px;
+        box-shadow: 3px 3px 1px white;
+        margin-top: -70px;
+    }
+
+    button a {
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    .box {
+        position: relative;
+        padding: 10px;
+        width: 70%;
+        height: 400px;
+        margin: auto;
+        background-color: black;
+        text-align: center;
+    }
+
+    .box::before,
+    .box::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        top: -11px;
+        left: -11px;
+        background: linear-gradient(45deg, red, orange, yellow, green, blue, blueviolet, deeppink, blueviolet, deeppink, red, orange, yellow, green, blue);
+        background-size: 300%;
+        animation: border 12s linear infinite;
+    }
+
+    .box::after {
+        filter: blur(50px);
+    }
+
+    @keyframes border {
+
+        0%,
+        100% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 300%;
+        }
+    }
+
+    footer {
+        background-color: rgb(0, 0, 70);
+        margin-top: 5%;
+    }
+</style>
+</style>
+
+<body>
+
+    <header>
+        <h1>FINAL STAGE</h1>
+    </header>
+
+    <p class="text">
+        The station's long-range scanners have detected that the Empire's main base of operations is set on Deimos,
+        a moon orbiting on Mars. (_) and the Astronauts of TSA have come a long way this far, for Emperor Zurgothrax
+        awaits for them, with the strongest force he could ever make, to unleash the full might of his Empire, against
+        the unstoppable TSF. At last, the Battle and Siege of Phobos awaits.
+    </p>
+    <div class="box">
+
+    </div>
+
+    <p class="text">
+        Zurgothrax has been defeated, Phobos has been conquered, and the Alien Empire is no more. Thanks to the efforts
+        of the Terran Space Forces, the Earth was saved from their impending demise. (), the sole Astronaut who carried
+        the counteroffensive on the Empire, came home with the other Astronauts as a hero, and Commander Tom Lightyear
+        has awarded () with the 'Medal of Honor' and the promotion of Commander. And for that, peace is now restored.
+    </p>
+
+    <h2>
+        CONGRATULATIONS !!! YOU WIN !!!
+    </h2>
+
+    <footer>
+        @may2023Game made by Noor Zahra, Rhea, Patrick, Abdulhadi, and Obaidullah
+    </footer>
+</body>
+
+</html>

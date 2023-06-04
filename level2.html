@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 2</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(7, 2, 33);
+        color: white;
+        /*https://media1.giphy.com/media/FlodpfQUBSp20/200w.gif?cid=6c09b9521zwnljjvciheggzd6bvh183yw2bktzhderf7bl4r&ep=v1_gifs_search&rid=200w.gif&ct=g*/
+        background-image: url(twinklingstarsbg.gif);
+        background-size: auto;
+        text-align: center;
+    }
+
+    header {
+        background-image: url(header-stars-background-design.jpg);
+        background-size: auto;
+        padding: 5px;
+        border-bottom: 1px solid midnightblue;
+    }
+
+    .text {
+        background-color: rgba(50, 0, 157, 0.326);
+        padding: 20px;
+        margin: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        width: 600px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        text-align: justify center;
+        margin-top: 5%;
+    }
+
+    button {
+        border: none;
+        background-color: lightblue;
+        padding: 20px;
+        color: darkblue;
+        border-radius: 20px;
+        box-shadow: 3px 3px 1px white;
+        margin-top: -70px;
+    }
+
+    button a {
+        text-decoration: none;
+        padding: 20px;
+    }
+
+
+    /*
+    canvas bg
+    
+    https://c1.wallpaperflare.com/preview/668/126/364/universe-the-background-image-space-galaxy.jpg*/
+
+    canvas
+
+    .box {
+        position: relative;
+        padding: 10px;
+        width: 70%;
+        height: 400px;
+        margin: auto;
+        background-color: black;
+        text-align: center;
+    }
+
+    .box::before,
+    .box::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        top: -11px;
+        left: -11px;
+        background: linear-gradient(45deg, red, orange, yellow, green, blue, blueviolet, deeppink, blueviolet, deeppink, red, orange, yellow, green, blue);
+        background-size: 300%;
+        animation: border 12s linear infinite;
+    }
+
+    .box::after {
+        filter: blur(50px);
+    }
+
+    @keyframes border {
+
+        0%,
+        100% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 300%;
+        }
+    }
+
+    footer {
+        background-color: rgb(0, 0, 70);
+        margin-top: 5%;
+    }
+</style>
+
+</style>
+
+<body>
+
+    <header>
+        <h1>LEVEL 2</h1>
+    </header>
+
+    <p class="text">
+        Meanwhile the operation is on greenlight, and Commander Tom sent his special forces including (_) to continue
+        on to deal with an existential threat. Zurgothrax has sent his General 'Zinister', to finish what the first
+        one could not, for the nearby Space Station has been under attack under his command for the TSF to rescue.
+
+    </p>
+    <div class="box">
+        <canvas id="gameboard"></canvas>
+
+    </div>
+
+    <p class="text">
+        General Zinister has been defeated, and the Space Station has been rescued, now as a base of operations for
+        the TSF to plan what seems to be their final assault.
+    </p>
+
+    <button>
+        <a href="level3.html">Continue...</a>
+    </button>
+
+    <footer>
+        @may2023Game made by Noor Zahra, Rhea, Patrick, Abdulhadi, and Obaidullah
+    </footer>
+    <script>
+        //selecting box div class and naming it canvas
+        const canvas = document.getElementsByClassName("gameboard");
+        //getting context
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = 300;
+        cnavas.height = 300;
+
+        //adding bg img
+        const background = new Image();
+        background.src = ''
+    </script>
+</body>
+
+</html>

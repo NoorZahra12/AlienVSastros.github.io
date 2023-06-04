@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Space Invaders</title>
+  <style>
+    #game-board {
+      position: relative;
+      width: 480px;
+      height: 320px;
+      margin: 0 auto;
+      border: 2px solid black;
+    }
+    .player {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-color: blue;
+    }
+    .bullet {
+      position: absolute;
+      width: 4px;
+      height: 16px;
+      background-color: red;
+    }
+    .invader {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-board">
+    <div class="player" id="player"></div>
+    <div class="bullet" id="bullet"></div>
+    <div class="invader" id="invader"></div>
+  </div>
+
+  <script>
+    // Player movement
+    document.addEventListener('keydown', function(event) {
+      const player = document.getElementById('player');
+      const bullet = document.getElementById('bullet');
+      const invader = document.getElementById('invader');
+      const bulletSpeed = 5;
+      const playerSpeed = 10;
+
+      if (event.key === 'ArrowLeft' && player.offsetLeft > 0) {
+        player.style.left = player.offsetLeft - playerSpeed + 'px';
+      }
+      if (event.key === 'ArrowRight' && player.offsetLeft + player.offsetWidth < 480) {
+        player.style.left = player.offsetLeft + playerSpeed + 'px';
+      }
+      if (event.key === ' ' && bullet.style.visibility === 'hidden') {
+        bullet.style.visibility = 'visible';
+        bullet.style.left = player.offsetLeft + player.offsetWidth / 2 - bullet.offsetWidth / 2 + 'px';
+        
+        // Bullet animation
+        function animateBullet() {
+          bullet.style.top = bullet.offsetTop - bulletSpeed + 'px';
+
+          // Check collision with invader
+          if (bullet.offsetTop <= invader.offsetTop + invader.offsetHeight &&
+              bullet.offsetTop + bullet.offsetHeight >= invader.offsetTop &&
+              bullet.offsetLeft + bullet.offsetWidth >= invader.offsetLeft &&
+              bullet.offsetLeft <= invader.offsetLeft + invader.offsetWidth) {
+            invader.style.visibility = 'hidden';
+            bullet.style.visibility = 'hidden';
+            alert('You win!');
+          }
+
+          // Check bullet position
+          if (bullet.offsetTop > 0) {
+            requestAnimationFrame(animateBullet);
+          } else {
+            bullet.style.visibility = 'hidden';
+          }
+        }
+        requestAnimationFrame(animateBullet);
+      }
+    });
+  </script>
+</body>
+</html>
