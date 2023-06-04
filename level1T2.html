@@ -34,9 +34,9 @@
         background-image: url(the-background-image-space-galaxy.jpg);
         background-size: cover;
         width: 600px;
-        height: 205px;
+        height: 400px;
         overflow: hidden;
-        margin: 20px;
+        margin: auto;
     }
 
     /*character*/
@@ -46,7 +46,7 @@
         padding: 0;
         position: absolute;
         /*this will help overlap*/
-        top: 200px;
+        top: 350px;
     }
 
     /*image of the character*/
@@ -67,12 +67,13 @@
     #blue {
         width: 40px;
         height: 20px;
+        margin-left: 470px;
         padding: 0;
         position: absolute;
         /*this position helps overlap on the div*/
-        top: 220px;
+        top: 360px;
         /*the distance the obstacle has from the top*/
-        left: 750px;
+        left: 600px;
         /*the distance the obstacle has from the left*/
         animation: blue 2s infinite linear;
     }
@@ -91,25 +92,25 @@
     /*this will animate the jump*/
     @keyframes jump {
         0% {
-            top: 150px;
+            top: 70px;
         }
 
         30% {
-            top: 50px
+            top: 100px
         }
 
         75% {
-            top: 50px
+            top: 100px
         }
 
         100% {
-            top: 150px
+            top: 70px
         }
     }
 
     /*animation class for the character to jump smoothly in linear which will take 0.3 second*/
     .animate {
-        animation: jump 0.3s linear;
+        animation: jump 0.5s linear;
     }
 
 
@@ -117,7 +118,7 @@
     /*Alien img*/
     #enemyimg {
         width: 50px;
-        margin-top: 100px;
+        margin-top: 250px;
         margin-left: 550px;
         position: absolute;
     }
@@ -176,14 +177,18 @@
         </div>
     </section>
 
-    <section style="width: 500px; height: 100px; color: white; margin-left: 750px; margin-top: -100px;">
+    <section style="width: 500px; height: 100px; color: white; margin-left: 560px; margin-top: 60px;">
         <h2>Click anyhwere on the screen to Jump</h2>
     </section>
 
-    <section style="margin: auto; width: 80%; color: white; margin-top: -30px;">
+    <section style="margin: auto; width: 80%; color: white; margin-top: -100px;">
 
 
         <p class="text">
+            Commander Tom Lightyear has ordered the Astronauts, including a promising recruit, you must prepare and
+            launch to space with available arms at the table. This will be your first time on duty, in service of the
+            TSF,
+            to destroy all aliens out of this world.
             The Astronauts of the TSF have won the fight, but the war has just begun. The loss of the Lieutenant
             'Zapman'
             is enough to anger that of Emperor 'Zurgothrax,' the leader of an Alien Empire, whose sought vengeance for
