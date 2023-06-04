@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Space Invaders</title>
   <style>
@@ -10,18 +11,21 @@
       margin: 0 auto;
       border: 2px solid black;
     }
+
     .player {
       position: absolute;
       width: 32px;
       height: 32px;
       background-color: blue;
     }
+
     .bullet {
       position: absolute;
       width: 4px;
       height: 16px;
       background-color: red;
     }
+
     .invader {
       position: absolute;
       width: 32px;
@@ -30,6 +34,7 @@
     }
   </style>
 </head>
+
 <body>
   <div id="game-board">
     <div class="player" id="player"></div>
@@ -39,7 +44,7 @@
 
   <script>
     // Player movement
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
       const player = document.getElementById('player');
       const bullet = document.getElementById('bullet');
       const invader = document.getElementById('invader');
@@ -55,16 +60,16 @@
       if (event.key === ' ' && bullet.style.visibility === 'hidden') {
         bullet.style.visibility = 'visible';
         bullet.style.left = player.offsetLeft + player.offsetWidth / 2 - bullet.offsetWidth / 2 + 'px';
-        
+
         // Bullet animation
         function animateBullet() {
           bullet.style.top = bullet.offsetTop - bulletSpeed + 'px';
 
           // Check collision with invader
           if (bullet.offsetTop <= invader.offsetTop + invader.offsetHeight &&
-              bullet.offsetTop + bullet.offsetHeight >= invader.offsetTop &&
-              bullet.offsetLeft + bullet.offsetWidth >= invader.offsetLeft &&
-              bullet.offsetLeft <= invader.offsetLeft + invader.offsetWidth) {
+            bullet.offsetTop + bullet.offsetHeight >= invader.offsetTop &&
+            bullet.offsetLeft + bullet.offsetWidth >= invader.offsetLeft &&
+            bullet.offsetLeft <= invader.offsetLeft + invader.offsetWidth) {
             invader.style.visibility = 'hidden';
             bullet.style.visibility = 'hidden';
             alert('You win!');
@@ -82,4 +87,5 @@
     });
   </script>
 </body>
+
 </html>
